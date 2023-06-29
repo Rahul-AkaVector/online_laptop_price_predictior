@@ -319,7 +319,8 @@ print('R2 score',r2_score(y_test,y_pred))           # R2 score 0.866332313633573
 
 import pickle
 
-pickle.dump(df,open('laptop_price_data.pkl','wb'))
+# pickle.dump(df,open('laptop_price_data.pkl','wb'))
+df.to_csv("cleaned_laptop_price_data.csv")
 pickle.dump(pipe,open('RandomForestModel.pkl','wb'))
 
 

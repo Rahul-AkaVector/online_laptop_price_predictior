@@ -39,7 +39,10 @@ obtain estimated laptop prices, enabling informed decisions and budget planning.
 effortless price comparisons and ensures value for money. 🌐💸""")
 st.write("---")
 st.header("Select Laptop 💻 Specifications")
-data = pickle.load(open('laptop_price_data.pkl', 'rb'))
+
+# data = pickle.load(open('laptop_price_data.pkl', 'rb'))
+
+data = pd.read_csv("cleaned_laptop_price_data.csv")
 pipe = pickle.load(open("RandomForestModel.pkl", "rb"))
 
 col1, col2 = st.columns(2)
